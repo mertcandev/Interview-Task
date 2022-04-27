@@ -30,6 +30,8 @@ class Utils {
   static const Color kBottomBarButtonColor = Color(0xff395162);
   static const Color kBottomBarIconColor = Color(0xffffffff);
   static const Color kExpenseGridAmountColor = Color(0xff51A9DE);
+  static const Color kChartPrimaryColor = Color(0xff48A1DB);
+  static const Color kChartSecondaryColor = Color(0xffAAAAAB);
 }
 
 class ExpenseCard {

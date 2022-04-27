@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pie_chart/pie_chart.dart';
 import 'package:tentative_job/utilities.dart';
 
 class ExpensesGrid extends StatefulWidget {
-  const ExpensesGrid({Key? key}) : super(key: key);
-
   @override
   State<ExpensesGrid> createState() => _ExpensesGridState();
 }
 
 class _ExpensesGridState extends State<ExpensesGrid> {
+  Map<String, double> chartMap = {"remain": 100, "balance": 150};
+
+  List<Color> colorList = [
+    Utils.kChartSecondaryColor,
+    Utils.kChartPrimaryColor
+  ];
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
@@ -57,6 +62,21 @@ class _ExpensesGridState extends State<ExpensesGrid> {
                                     style: TextStyle(
                                         fontSize: 14.h,
                                         color: Utils.kExpenseGridAmountColor),
+                                  ),
+                                  PieChart(
+                                    dataMap: chartMap,
+                                    colorList: colorList,
+                                    chartRadius: 25.h,
+                                    ringStrokeWidth: 2,
+                                    chartType: ChartType.ring,
+                                    legendOptions:
+                                        const LegendOptions(showLegends: false),
+                                    chartValuesOptions:
+                                        const ChartValuesOptions(
+                                            showChartValues: false),
+                                    animationDuration:
+                                        const Duration(seconds: 3),
+                                        initialAngleInDegree: 90.0,
                                   )
                                 ],
                               ),
