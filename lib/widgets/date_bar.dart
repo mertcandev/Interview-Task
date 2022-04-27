@@ -19,7 +19,7 @@ class _DateBarState extends State<DateBar> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "Viev as of:",
+                  "View as of:",
                   style: TextStyle(
                       fontSize: 16.h,
                       fontWeight: FontWeight.w700,

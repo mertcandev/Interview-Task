@@ -21,8 +21,11 @@ class Utils {
   static const Color kTimePickingBarSelectedTextColor = Color(0xffE5E5E5);
   static const Color kTimePickingBarUnselectedTextColor = Color(0xff747575);
   static const Color kBalanceTypePickerColor = Color(0xff48A1DB);
-  static const Color kExpenseIncomeBarColor = Color(0xff48A1DB);
-  static const Color kExpenseIncomeBarBorderColor = Color(0xffffffff);
+  static const Color kExpenseIncomeSelectedBarColor = Color(0xff48A1DB);
+  static const Color kExpenseIncomeUnselectedBarColor = Color(0xffffffff);
+  static const Color kExpenseIncomeSelectedTextColor = Color(0xffE5E5E5);
+  static const Color kExpenseIncomeUnselectedTextColor = Color(0xff747575);
+  static const Color kExpenseIncomeBarBorderColor = Color(0xff48A1DB);
   static const Color kTotalTextColor = Color(0xff000000);
   static const Color kBottomBarButtonColor = Color(0xff395162);
   static const Color kBottomBarIconColor = Color(0xffffffff);
@@ -32,7 +35,7 @@ class Utils {
 class ExpenseCard {
   String? expenseName;
   int? expenseAmount;
-  
+
   ExpenseCard({
     this.expenseName,
     this.expenseAmount,
